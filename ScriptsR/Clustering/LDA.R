@@ -14,7 +14,7 @@ start_time <- proc.time()
 training <- read.df(args[3], source = "libsvm")
 
 # Fit a latent dirichlet allocation model with spark.lda
-model <- spark.lda(training, k = 2, maxIter = 2)
+model <- spark.lda(training, k = 10, maxIter = 10)
 
 # Model summary
 #summary(model)

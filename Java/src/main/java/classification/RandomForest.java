@@ -76,7 +76,8 @@ public class RandomForest {
         // Train a RandomForest model.
         RandomForestClassifier rf = new RandomForestClassifier()
                 .setLabelCol("indexedLabel")
-                .setFeaturesCol("indexedFeatures");
+                .setFeaturesCol("indexedFeatures")
+                .setNumTrees(10);
 
         // Convert indexed labels back to original labels.
         IndexToString labelConverter = new IndexToString()

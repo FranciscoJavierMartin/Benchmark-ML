@@ -13,7 +13,7 @@ start_time <- proc.time()
 
 df <- read.df(args[3], source = "libsvm")
 
-df_list <- randomSplit(df, c(7, 3), 2)
+df_list <- randomSplit(df, c(7, 3), 1234)
 
 training <- df_list[[1]]
 test <- df_list[[2]]

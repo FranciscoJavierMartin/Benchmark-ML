@@ -14,14 +14,14 @@ start_time <- proc.time()
 
 df <- read.df(args[3], source = "libsvm")
 
-df_list <- randomSplit(df, c(7, 3), 2)
+df_list <- randomSplit(df, c(7, 3), 1234)
 
 training <- df_list[[1]]
 test <- df_list[[2]]
 
 
 # Fit bisecting k-means model with four centers
-model <- spark.bisectingKmeans(training, ~ features, k = 4)
+model <- spark.bisectingKmeans(training, ~ features, k = 2)
 
 # get fitted result from a bisecting k-means model
 fitted.model <- fitted(model, "centers")
