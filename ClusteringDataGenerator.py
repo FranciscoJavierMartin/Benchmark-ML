@@ -1,7 +1,7 @@
 import random
 
 if __name__ == "__main__":
-    number_of_points = 10000
+    number_of_points = 1000
     number_of_features = 40
 
     probability_of_empty_values = 0.1
